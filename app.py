@@ -14,9 +14,14 @@ def home():
 
 @app.route('/search', methods=['POST'])
 def search():
-    query = request.form['query']
-    results = perform_search(query)
-    return render_template('results.html', query=query, results=results)
+    query = request.form['query'] if 'query' in request.form else ''
+    if query:
+        results = perform_search(query)
+        return render_template('results.html', query=query, results=results)
+    else:
+        # Handle empty query case, such as displaying an error message
+        error_message = "Please enter a search query."
+        return render_template('index.html', error=error_message)
 
 
 @app.route('/suggestions', methods=['POST'])
