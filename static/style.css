@@ -100,3 +100,24 @@ a:hover {
   display: block;
   margin: 10px 0;
 }
+
+.clock {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+}
+
+.ai-search-button {
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #11a737;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}

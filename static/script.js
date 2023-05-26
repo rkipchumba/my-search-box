@@ -37,3 +37,40 @@ function displaySuggestions(suggestions) {
     suggestionsContainer.append(suggestionList);
   }
 }
+
+/// Function to update the clock and display greeting
+function updateClock() {
+  var now = new Date();
+  var hours = now.getHours();
+  var greeting;
+
+  if (hours >= 5 && hours < 12) {
+    greeting = "Good Morning";
+  } else if (hours >= 12 && hours < 18) {
+    greeting = "Good Afternoon";
+  } else {
+    greeting = "Good Evening";
+  }
+
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var timeString =
+    hours.toString().padStart(2, "0") +
+    ":" +
+    minutes.toString().padStart(2, "0") +
+    ":" +
+    seconds.toString().padStart(2, "0");
+
+  $(".clock").text(greeting + ", the time is: " + timeString);
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial clock update
+updateClock();
+
+// Function to navigate to AI search page
+function navigateToAISearch() {
+  window.location.href = "https://chat.openai.com/";
+}
