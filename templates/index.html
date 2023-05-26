@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Search Box</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <img
+          src="/static/images/search-icon-small-7.png"
+          alt="Logo"
+          width="50%"
+        />
+      </div>
+      <form method="POST" action="/search">
+        <input
+          type="text"
+          name="query"
+          class="search-input"
+          placeholder="Search  or type a URL"
+          autocomplete="off"
+        />
+        <button type="submit" class="search-button">Query</button>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
