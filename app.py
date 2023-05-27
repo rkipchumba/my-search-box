@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request
 from config import API_KEY, SEARCH_ENGINE_ID
+from flask_frozen import Freezer
 
 import requests
 import json
 
 app = Flask(__name__)
+freezer = Freezer(app)
 
 
 @app.route('/')
@@ -53,4 +55,4 @@ def perform_search(query):
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=True)

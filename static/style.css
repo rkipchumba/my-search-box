@@ -132,3 +132,16 @@ a:hover {
   width: 30px;
   cursor: pointer;
 }
+
+.open-ai-button,
+.google-bard-button {
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #11a737;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
