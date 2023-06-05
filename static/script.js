@@ -61,7 +61,7 @@ function updateClock() {
     ":" +
     seconds.toString().padStart(2, "0");
 
-  $(".clock").text(greeting + ", the time is: " + timeString);
+  $(".clock").text(greeting + ", Kipchumba : " + timeString);
 }
 
 // Update the clock every second
